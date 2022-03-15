@@ -1,0 +1,97 @@
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+    --quote-font-size: 28px;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    background: var(--dark-blue);
+    text-align: center;
+}
+
+.advice {
+    display: block;
+    background: var(--dark-grayish-blue);
+    width: 475px;
+    height: min-content;
+    border-radius: 20px;
+    padding: 40px 40px 0;
+}
+
+.advice__number{
+    text-transform: uppercase;
+    color: var(--neon-green);
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.advice__quote{
+    color: var(--light-cyan)
+}
+
+.separator::after{
+    content: url('./images/pattern-divider-desktop.svg');
+    width: 100%;
+}
+
+.roll {
+    width: 70px;
+    height: 70px;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    color: var(--dark-blue); 
+    border: none;
+    position:relative;
+    top: 35px;
+}
+
+.roll {
+    box-shadow: none;
+    transition: .8s;
+}
+
+
+.roll:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px 3px var(--neon-green);
+    transition: .8s;
+}
+
+.roll::after{
+    width: 100%;
+    content: url('./images/icon-dice.svg');
+}
+
+@media (max-width: 600px) {
+    .advice {
+        display: inline-block;
+        width: 100%;
+        margin: 0 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .separator::after{
+        content: url('./images/pattern-divider-mobile.svg');
+        width: 100%;
+    }
+
+    .advice__quote{
+        margin-bottom: 5px;
+    }
+}
